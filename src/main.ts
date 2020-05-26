@@ -36,7 +36,8 @@ function main(argv: string[]) {
     provider = new CustomAuthProvider(username, password);
     console.log(`using simple auth with username=${username} password=${password}`);
   }
-  const portNum = parseInt(argsObj.port || '11451')
+  //const portNum = parseInt(argsObj.port || '11451')
+  const portNum = parseInt('11451')
   let s = new SLPServer(portNum, provider)
   let monitor = new ServerMonitor(s)
   monitor.start(portNum)
